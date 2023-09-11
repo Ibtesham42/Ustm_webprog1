@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> ass7</title>
+
+
+
+<head>
+
+<body>
+<h3> Login form</h3>
+<form align =Center >
+	Roll no <input type="Number" name="r1"/><br><br>
+	Name <input type="Text" name="name"/><br><br>
+	Course <input type="Text" name="course"/><br><br>
+	Semister <input type="Text" name="semister"/> <br><br>
+	User id <input type="Number" name="id"/><br><br>
+	Password <input type="Password" name="ps"/><br><br>
+	<input type="Button" ONCLICK="check(this.form)"value="Login"/>
+	<input type="Reset" value="Cancel"/>
+	 
+		
+</form>
+<script language="javascript">
+	function check(form)
+	{
+		if(form.r1.value=="" || form.name.value=="" || form.course.value=="" || form.semister.value=="" || form.id.value=="" || form.ps.value=="" )
+		{	
+			alert("Please Fill The Form");
+		}
+		else if(form.id.value=="Ibtesham" && form.ps.value=="123456")
+		{
+			window.open("redirect.html");
+		}
+		else
+		{
+			alert("Error");
+		}
+	}
+ 
+</script>
+
+
+</body>
+
+
+</html>
