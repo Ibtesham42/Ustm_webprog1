@@ -1,0 +1,19 @@
+<html>
+
+<head>
+<title>Ass10</title>
+
+</head>
+<body>
+<form>
+	<fieldset>
+	<legend>Basic Form</legend>
+	Enter 1st Number:<input type="number" name="num1"/>
+	
+	</fieldset>
+<form>
+
+</body>
+
+
+</html>
