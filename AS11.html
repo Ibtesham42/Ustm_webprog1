@@ -1,0 +1,93 @@
+<!--Create a webpage to design a form of entering A number and check whether the number is positive or negative .if the number is positive ,then check whether the number is armstrong or perfect number.Use internal css to design the webpage-->
+
+<html>
+    <head>
+      <title>Assignment 11</title>
+	   <style>
+	    body{ background-color: rgb(55, 107, 128);
+		      font-family: TimesNewRoman;
+			}
+		h1{ color:rgb(3, 16, 87);
+		  }
+	   </style>
+	   <script language="javascript">
+	   var  no;
+	   var count=0;
+	   var rem=0;
+	   var result=0;
+	   var sum=0;
+	   var i;
+	   
+	   </script>
+    </head>
+	<body>
+	  <h1>CHECKING A NUMBER IS POSITIVE OR NEGATIVE</h1>
+	    <form>
+		  Enter a number<input type="Text" name="n1"/><br><br>
+		   <input type ="Button" ONCLICK="check(this.form)"value="Check"/>
+	       <input type ="Reset" value="cancel"/>
+	    </form>
+	  <script language="javascript">
+	 function check (form)
+	  {
+	  var num=form.n1.value;
+	  no=num;
+	   if (num=="")
+	   {
+	   alert("Please enter a number");
+	   }
+	   else if (num>0)
+	   {
+	   document.write("<h1>Number = "+num+" is positive</h1>");
+	 
+	    while(num!=0)
+		{
+		rem=num%10;
+		 num=parseInt(num/10);
+		 
+		count++;
+		//document.write(rem);
+		}
+		//document.write(count);
+		num=no;
+		//document.write(num);
+		
+		while(num!=0)
+		{
+		rem=num%10;
+		result+=Math.pow(rem,count);
+		 num=parseInt(num/10);
+		}
+		//document.write(result);
+		if (result==no)
+		 {
+		 document.write("Number is armstrong<br>");
+		 for(i=1;i<no;i++)
+		   {
+		     if(no%i==0)
+			 sum+=i;
+		   }
+		   if(sum==no)
+		   document.write("Number is perfect<br>");
+		   else
+		   document.write("Number is not perfect");
+		 }
+		 else{
+		 document.write("Number is  not armstrong");
+		 }
+		
+	   }
+	   else if(num==0)
+	   {
+	   document.write("<h1>Number is neutral</h1>");
+	   }
+	   
+	   else 
+	   {
+	   document.write("<h1>Number is negative</h1>");
+	   }
+	   
+	 }
+	  </script>
+	</body>
+</html>
